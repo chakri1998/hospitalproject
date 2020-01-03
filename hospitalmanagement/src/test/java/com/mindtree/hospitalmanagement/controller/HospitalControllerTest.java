@@ -39,7 +39,7 @@ public class HospitalControllerTest {
 	@Test
 	public void testAddDoctor() {
 		when(serviceImpl.addDoctor(doctorDto)).thenReturn(doctor);
-		assertEquals(controller.addDoctor(doctorDto).getBody()),200);
+		assertEquals(controller.addDoctor(doctorDto).getBody(),200);
 	}
 
 	@Test
