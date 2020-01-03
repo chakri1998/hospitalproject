@@ -39,12 +39,16 @@ public class HospitalControllerTest {
 	@Test
 	public void testAddDoctor() {
 		when(serviceImpl.addDoctor(doctorDto)).thenReturn(doctor);
-		assertEquals(controller.addDoctor(doctorDto).getBody(),200);
+		assertEquals(controller.addDoctor(doctorDto).getStatusCodeValue(),200);
 	}
 
 	@Test
 	public void testGetDoctors() {
-		fail("Not yet implemented");
+		List<DoctorDto>result=new ArrayList<DoctorDto>();
+		result.add(doctorDto);
+		when(serviceImpl.getAllDoctors()).thenReturn(result);
+		assertEquals(result.size(), 1);
 	}
+
 
 }
