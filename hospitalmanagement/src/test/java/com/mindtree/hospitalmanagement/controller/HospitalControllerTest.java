@@ -3,6 +3,11 @@ package com.mindtree.hospitalmanagement.controller;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.when;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.naming.spi.DirStateFactory.Result;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -49,6 +54,5 @@ public class HospitalControllerTest {
 		when(serviceImpl.getAllDoctors()).thenReturn(result);
 		assertEquals(result.size(), 1);
 	}
-
 
 }
